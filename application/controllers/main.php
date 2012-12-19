@@ -3,10 +3,14 @@ class main extends CI_Controller {
 
 	function index()
 	{
+		redirect('home');
+	}
+	function home(){
 		$header['title'] = 'Pinpoint Africa Media | Cost Effective Advertising';
-		$header['intro'] = 'PinPoint Africa Media is a digital advertising network comprised of top Tanzanian websites, blogs, newsletters, and other digital content. <a title = "The Content Network" href="the-content-network">View the Network</a>.';
+		$header['intro'] = '';
 		
-		$header['h1'] ='';
+		$header['h1'] ='The Single Most Cost-effective Way to Reach Proffesional & Middle Class Tanzanians!
+';
 		
 		$this->load->view('Header',$header);
 		$this->load->view('navigation');
@@ -20,9 +24,11 @@ class main extends CI_Controller {
 		if($option == '')
 		{
 			$header['title'] = 'Advertising Rates';
-			$header['h1'] ='Advertising Rates';
-			$header['intro'] = '<span style = "color:#FFF"><strong>Base Rate = $1.25 (2,000 TZS) CPM (Cost Per 1,000 Ad Impressions)</strong><br>- Minimum = $250 + VAT per/month<Br>- $250 (400,000 TZS) = 200,000 Ad Impressions<br>- Run of Network (all sites) - No Targeting</span>';
-			$data['cpm_advertising'] = $this->db->get('cpm_advertising_bundles');
+			$header['h1'] ='Common Monthly Package Rates';
+			$header['intro'] = '<span style = "color:#FFF"><strong>Real Time Perfomance Monitoring</strong></span>';
+			$header['intro_p'] = '<span style = "color:#FFF"><strong>( #impressions, people reached, clicks, etc.)</strong></span>';
+		
+			//$data['cpm_advertising'] = $this->db->get('cpm_advertising_bundles');
 			$this->load->view('Header',$header);
 			$this->load->view('navigation');
 			$this->load->view('advertising',$data);
@@ -85,6 +91,7 @@ class main extends CI_Controller {
 		
 		$this->load->view('Header',$header);
 		$this->load->view('navigation');
+		
 		$this->load->view('adpages',$datas);
 			
 		$this->load->view('Footer');

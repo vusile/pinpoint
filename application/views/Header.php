@@ -21,6 +21,8 @@
 			.container { /*background-color:#231f20;*/ background-color:#000; color: #fff}
 
 			.container div p.headerfont { color: #efee0f; margin-left: 5px; text-align: justify; }
+			.container div p.headerfont{ color: #efee0f; margin-left: 5px; text-align: justify; }
+
 			.container div h1.headerfont { color: #efee0f; margin-left: 10px; text-align: left; font-size:18px; }
 			.container div.header { border-left: 2px solid #fff; width: 640px; }
 			
@@ -57,6 +59,8 @@
 
 		<div class="container container_12">
 
+			<div id="header">
+
 
 			<div class="grid_4" style = 'margin-top: 10px;'>
 
@@ -68,15 +72,18 @@
 				
 
 			</div>
-			<div class ="grid_7 header" style = 'margin-top: 10px;'>
+			<div class ="grid_7 header" style = 'margin-top: 0px;'>
 
 			<?php if ($h1 != ''): ?>
 				<h1  class ='headerfont'><?php echo $h1 ?></h1>
 			<?php endif; ?>
 			
 				<p class = 'headerfont'><?php echo strip_tags($intro); ?></p>
+				<p style="margin-top:-30px;" ><?php echo strip_tags($intro_p); ?></p>
+
 
 			</div>
+		</div>
 
 			
 <div class='clear'>&nbsp;</div>

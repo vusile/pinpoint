@@ -28,7 +28,7 @@ a img {
 }
 
 aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {display: block}
+footer, header, hgroup, nav, section {display: block}
 
 /***************************************************
 			      Global styles
@@ -188,7 +188,6 @@ header {
 	position: relative;
 	float: left;
 	width: 100%;
-	height: 100px;
 	
 }
 	

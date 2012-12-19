@@ -1,15 +1,53 @@
-<div class='grid_3' style = 'text-align: left;'><img style = 'margin-top: 50px;' src = 'images/Home-Page-Image.png' /></div>
-<div class='grid_6' style = 'text-align: left; margin-top:30px;'>
-<h1 style = 'font-size: 18px; text-align:center;'>Cost Effective Digital Advertising Made Easy</h1>
-<h2 style = 'font-size: 16px; text-align:center;'>For Businesses Large and Small</h2>
-Reach hundreds of thousands professional / middle class
-Tanzanians each month.
-<p style = 'font-size: 18px;text-align: center;'>OR</p>
-Laser target your ad to a specific content type, demographic
-profile, geo-location of visitor, and much more...
-<p style = 'text-align: center; color: #efee0f;'>One Campaign - One Invoice > Multiple Websites<br><br>
-Detailed Reporting &nbsp;<span style ='font-size:24px'> & </span> &nbsp;Quantifiable Results</p>
+
+<div class='grid_12' style = 'text-align: center; margin-top:30px;'>
+<h1 style = 'font-size: 20px; text-align:center;font-weight:normal;margin-top: -26px;'>Over <span style="font-weight:bold">15 MILLION </span>digital banner ads delivered to nearly<span style="font-weight:bold"> 600,000 </span>unique/different people<br> on <span style="font-weight:bold">8 of Tanzania’s most popular websites </span>every month!
+</h1>
+<h1><span style="font-size: 20px; text-align:center;font-weight:normal">Is Digital Part of Your Marketing Plan?</span></h1>
+<div class='grid_12'>
+<div class='grid_4'>
+	<a href="http://www.zoomtanzania.com"><img src="pageimages/zoomlogo.png" style=""/>  </a>
+    <a href="http://www.8020fashions.blogspot.com/"><img src="pageimages/8020.png" style="margin-top: 22px;" /> </a>
+     <a href="http://www.djchoka.blogspot.com/"> <img src="pageimages/djchoka.png"  style="margin-top: 22px;"/></a>
+
 </div>
-<!--<div class='grid_9'>
-<p>745px</p>
-</div>-->
+<div class='grid_4'>
+  <a href="http://www.jamiiforums.com"><img src="pageimages/jamiiforums.png"style=""/></a>   
+  <a href="http://www.mamazuri.com"> <img src="pageimages/mamazuri.png" style="margin-top: 22px;"/></a>
+  <a href="http://www.bongo5.com"> <img src="pageimages/bongo5.png" style="margin-top: 22px;"/></a>
+</div>
+<div class='grid_4'>
+	<a href="http://www.shaffihdauda.com"><img src="pageimages/shafii.png"/></a>
+     <a href="http://www.djfetty.blogspot.com"><img src="pageimages/b7b39-dj-fetty-logo.png" style="margin-top:10px;"/></a>
+</div>
+</div >
+
+<div class='grid_12'>
+
+<div class="img4 resizer">
+	
+
+</div>
+<div class="img5">
+   
+</div>
+<div class="img6 resizer">
+	 
+
+</div>
+</div>
+<div class='grid_12'>
+
+<div class="img7">
+	
+
+</div>
+<div class="img8">
+   
+</div>
+</div>
+
+
+
+
+
+
