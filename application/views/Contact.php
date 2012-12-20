@@ -112,13 +112,13 @@ Captcha:
 
 <div style = 'clear: none; width: 206px; height:30px;font-size:14px; margin-right: 150px;float: right;margin-top: -645px;'>
 	<h1 style="font-size: 18px;color: #efee0f; ">Get In Touch</h1>
-	<h2 style="font-size: 13px;">You can also contact us at: </h2>
+	<h2 style="font-size: 13px;">Call Us M- F 9a.m- 5p.m EAT</h2>
 
 
-<img src="images/mobile_phone.png";/><p style="margin: -42px 0px 10px 38px;">+255 784 402 463	</p>
+<p style="margin: -3px 0px 3px -3px;">+255 784 402 463	</p>
 <br>
-<img src="images/mail.png";/><p style="margin: -28px 0px 10px 50px;font-size:15px;">sales@PinPointAfricaMedia.com
-	</p>
+<!--<img src="images/mail.png";/><p style="margin: -28px 0px 10px 50px;font-size:15px;">sales@PinPointAfricaMedia.com
+	</p>-->
 </div>
 		
 

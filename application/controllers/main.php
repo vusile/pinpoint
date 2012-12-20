@@ -29,6 +29,22 @@ class main extends CI_Controller {
 			$header['intro_p'] = '<span style = "color:#FFF"><strong>( #impressions, people reached, clicks, etc.)</strong></span>';
 		
 			//$data['cpm_advertising'] = $this->db->get('cpm_advertising_bundles');
+			$this->db->select('*');
+			$this->db->from('advertising_desc');
+			$this->db->join('advertising', 'advertising_desc.id = advertising.category','left');
+			$data = $this->db->get();
+			
+			$group_cv = $advertising_desc = array();
+foreach ($data as $k=>$v) {
+    $group_cv[$v['id']][] = $v;
+}
+
+foreach ($data as $k=>$v) {
+    $advertising_desc[$v['id']] = $v;
+}
+			
+        	//$data['query'] = $this->db->get();
+
 			$this->load->view('Header',$header);
 			$this->load->view('navigation');
 			$this->load->view('advertising',$data);
@@ -88,6 +104,7 @@ class main extends CI_Controller {
 		$header['h1'] = $contents->title;
 		$header['intro'] = '';
 		$datas['content'] = $contents->text;
+		$datas['peopleimg']=   '<img src="images/Home-Page-Image.png" style="margin: 84px 0px 0px 0px;" />';
 		
 		$this->load->view('Header',$header);
 		$this->load->view('navigation');

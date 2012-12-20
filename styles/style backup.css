@@ -16,20 +16,19 @@
 
 body {
   min-width: 1020px;background:#000;
- 
 }
-            a#home  {display:inline-block; background:url(../images/150x25Home.png) no-repeat; padding-left: 145px; text-decoration:none; padding-top:10px; }
+            a#home:link  {display:inline-block; background:url(../images/150x25Home.png) no-repeat ; padding-left: 145px; text-decoration:none; padding-top:10px; }
 			a#home.current  {display:inline-block; background:url(../images/200x25Home.png) no-repeat ; padding-left: 200px; text-decoration:none; padding-top:10px; }
 
-			a#advertising {display:inline-block; background:url(../images/buttons/150x25Buttons-03.png) no-repeat ; padding-left: 145px; text-decoration:none; padding-top:10px; }
+			a#advertising:link  {display:inline-block; background:url(../images/buttons/150x25Buttons-03.png) no-repeat ; padding-left: 145px; text-decoration:none; padding-top:10px; }
 			a#advertising.current  {display:inline-block; background:url(../images/200x25Buttons-01.png) no-repeat ; padding-left: 200px; text-decoration:none; padding-top:10px; }
 
 			
-			a#ad-types  {display:inline-block; background:url(../images/buttons/150x25Buttons-01.png) no-repeat ; padding-left: 145px; text-decoration:none; padding-top:10px; }
+			a#ad-types:link  {display:inline-block; background:url(../images/buttons/150x25Buttons-01.png) no-repeat ; padding-left: 145px; text-decoration:none; padding-top:10px; }
 			a#ad-types.current  {display:inline-block; background:url(../images/200x25Buttons-04.png) no-repeat ; padding-left: 200px; text-decoration:none; padding-top:10px; }
 
 			
-			a#network {display:inline-block; background:url(../images/150x25Buttons-07.png) no-repeat ; padding-left: 155px; text-decoration:none; padding-top:10px; }
+			a#network:link  {display:inline-block; background:url(../images/150x25Buttons-07.png) no-repeat ; padding-left: 155px; text-decoration:none; padding-top:10px; }
 			a#network.current  {display:inline-block; background:url(../images/200x25Buttons-07.png) no-repeat ; padding-left: 200px; text-decoration:none; padding-top:10px; }
 
 			
@@ -37,15 +36,15 @@ body {
 			a#targeting.current  {display:inline-block; background:url(../images/200x25Buttons-02.png) no-repeat ; padding-left: 200px; text-decoration:none; padding-top:10px; }
 
 			
-			a#creative {display:inline-block; background:url(../images/150x25Buttons-05.png) no-repeat ; padding-left: 155px; text-decoration:none; padding-top:10px; }
+			a#creative:link  {display:inline-block; background:url(../images/150x25Buttons-05.png) no-repeat ; padding-left: 155px; text-decoration:none; padding-top:10px; }
 			a#creative.current  {display:inline-block; background:url(../images/200x25Buttons-05.png) no-repeat ; padding-left: 200px; text-decoration:none; padding-top:10px; }
 
 						
-			a#about  {display:inline-block; background:url(../images/buttons/150x25Buttons-02.png) no-repeat ; padding-left: 155px; text-decoration:none; padding-top:10px; }
+			a#about:link  {display:inline-block; background:url(../images/buttons/150x25Buttons-02.png) no-repeat ; padding-left: 155px; text-decoration:none; padding-top:10px; }
 			a#about.current  {display:inline-block; background:url(../images/200x25Buttons-03.png) no-repeat ; padding-left: 200px; text-decoration:none; padding-top:10px; }
 
 						
-			a#contact{display:inline-block; background:url(../images/buttons/150x25Buttons-04.png) no-repeat ; padding-left: 155px; text-decoration:none; padding-top:10px; }
+			a#contact:link  {display:inline-block; background:url(../images/buttons/150x25Buttons-04.png) no-repeat ; padding-left: 155px; text-decoration:none; padding-top:10px; }
 			a#contact.current  {display:inline-block; background:url(../images/200x25Buttons-06.png) no-repeat ; padding-left: 200px; text-decoration:none; padding-top:10px; }
 
 			
@@ -54,7 +53,7 @@ body {
 				border: none;
 			}
 /*  menu goes here  ---------*/
-#navigation{
+/*#navigation{
 width:100%;
 margin-top: 5px;
 }
@@ -64,12 +63,12 @@ margin-top: 5px;
 }
 
 #navigation ul li{
-	display:inline; 
+	/*display:inline; 
 	height:30px; 
 	float:left; 
 	list-style:none; 
 	margin-left:15px;
-}
+}*/
 #header{
 width:100%;
 
@@ -99,7 +98,7 @@ color: #000;
 padding: 4px;
 text-align:center;
 border: 1px #fff solid;
-font-size:15px;
+font-size:18px;
 width:34%;
 }
 
@@ -111,18 +110,10 @@ font-weight: bold;
 text-align:center;
 height: 80px;
 }
-/*.hed img{
+.hed img{
 
  float: left;
 
-}*/
-td.hed .imgleft{
-	margin-left: -917px;
-	margin-top: 5px;
-}
-td.hed .imgright{
-	margin-right: -911px;
-margin-top: -62px;
 }
 .hed h2{
 text-align: center;
@@ -132,8 +123,8 @@ color: #efee0f;
 }
 .hed a:link{
 text-align: center;
-font-size: 16px;
-color: white;
+font-size:18px;
+color: #000;
 font-weight: normal;
 
 }

@@ -5,13 +5,13 @@
 <h1><span style="font-size: 20px; text-align:center;font-weight:normal">Is Digital Part of Your Marketing Plan?</span></h1>
 <div class='grid_12'>
 <div class='grid_4'>
-	<a href="http://www.zoomtanzania.com"><img src="pageimages/zoomlogo.png" style=""/>  </a>
+	<a href="http://www.jamiiforums.com"><img src="pageimages/jamiiforums.png" style=""/>  </a>
     <a href="http://www.8020fashions.blogspot.com/"><img src="pageimages/8020.png" style="margin-top: 22px;" /> </a>
      <a href="http://www.djchoka.blogspot.com/"> <img src="pageimages/djchoka.png"  style="margin-top: 22px;"/></a>
 
 </div>
 <div class='grid_4'>
-  <a href="http://www.jamiiforums.com"><img src="pageimages/jamiiforums.png"style=""/></a>   
+  <a href="http://www.zoomtanzania.com"><img src="pageimages/zoomlogo.png"style=""/></a>   
   <a href="http://www.mamazuri.com"> <img src="pageimages/mamazuri.png" style="margin-top: 22px;"/></a>
   <a href="http://www.bongo5.com"> <img src="pageimages/bongo5.png" style="margin-top: 22px;"/></a>
 </div>
