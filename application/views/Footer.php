@@ -7,7 +7,7 @@
 
 			<div class="clear">&nbsp;</div>
 
-		</div>
+	<!--	</div>-->
 
 	</body>
 

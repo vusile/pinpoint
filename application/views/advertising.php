@@ -16,7 +16,7 @@
 <table class="stats" cellspacing="0">
 
 <tr>
-<td class="hed" colspan="4"><h2>Target All 8 Sites (No Targeting)</h2></td>
+<td class="hed" colspan="4"><h2><?php echo $title ?></h2></td>  <!--Target All 8 Sites (No Targeting)-->
 
 </tr>
 <tr>

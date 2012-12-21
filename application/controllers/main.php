@@ -34,15 +34,12 @@ class main extends CI_Controller {
 			$this->db->join('advertising', 'advertising_desc.id = advertising.category','left');
 			$data = $this->db->get();
 			
-			$group_cv = $advertising_desc = array();
-foreach ($data as $k=>$v) {
-    $group_cv[$v['id']][] = $v;
-}
-
-foreach ($data as $k=>$v) {
-    $advertising_desc[$v['id']] = $v;
-}
-			
+			//$data['title'][] = $v->title;
+//			$data['icon'][] = $v->icon;
+//			$data['rate'][] = $v->rate;
+//			$data['icon'][] = $v->Details;
+//			
+		
         	//$data['query'] = $this->db->get();
 
 			$this->load->view('Header',$header);
