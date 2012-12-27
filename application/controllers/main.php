@@ -80,10 +80,14 @@ class main extends CI_Controller {
 		
 		$this->db->where('url','ad-examples');
 		$data = $this->db->get('content');
-		$examples = $data->row();
+		
+		$text = '';
+		
+		foreach($data->result() as $dt)
+			$text .= $dt->text;
 		
 		
-		$datas['content'] = $examples->text;
+		$datas['content'] = $text;
 		
 		$this->load->view('Header',$header);
 		$this->load->view('navigation');
