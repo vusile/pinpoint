@@ -24,9 +24,9 @@
 			.container div h1.headerfont { color: #efee0f; margin-left: 10px; text-align: left; font-size:18px; }
 			.container div.header { border-left: 2px solid #fff; width: 640px; }
 			
-			.container div #menu{ list-style: none; margin:0; padding:0;}
+			.container div #menu{ list-style: none; margin:0; padding:0; float: left; z-index:999px !important}
 			.container div img { margin:0; padding:0; }
-			.container div #menu li { list-style: none; margin-top:20px; }
+			.container div #menu li { list-style: none; margin-top:20px;  float: left; margin-left:10px;}
 			.container div a { color:#009bdf; }
 
 			div.header  p { padding:10px; }

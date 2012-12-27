@@ -1,5 +1,5 @@
-<div class='grid_3'>
-<ul id = 'menu' style = 'margin-left: 20px; margin-top: 40px'>
+<div class='grid_12'>
+<ul id = 'menu' style = 'margin-left: 20px; margin-top: 10px; clear: both;'>
 <li><a <?php if($this->uri->segment(1) == 'advertising-rates') echo "class = 'current'" ?> id ='advertising' href = 'advertising-rates' title = 'Advertising Rates' >&nbsp;</a></li>
 <li><a <?php if($this->uri->segment(1) == 'banner-ad-examples') echo "class = 'current'" ?> id = 'ad-types' href = 'banner-ad-examples' title = 'Banner Ad Examples'>&nbsp;</a></li>
 <li><a <?php if($this->uri->segment(1) == 'the-content-network') echo "class = 'current'" ?> id = 'network' href = 'the-content-network' title = 'The Content Network'>&nbsp;</a></li>
