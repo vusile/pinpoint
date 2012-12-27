@@ -24,7 +24,8 @@
 			.container div p.headerfont{ color: #efee0f; margin-left: 5px; text-align: justify; }
 
 			.container div h1.headerfont { color: #efee0f; margin-left: 10px; text-align: left; font-size:18px; }
-			.container div.header { border-left: 2px solid #fff; width: 640px; }
+			.container div.header {  width: 640px; height: 100px;}
+			.container div #logo {border-right: 2px solid #fff;}
 			
 			.container div #menu{ list-style: none; margin:0; padding:0;}
 			.container div img { margin:0; padding:0; }
@@ -62,11 +63,12 @@
 			<div id="header">
 
 
-			<div class="grid_4" style = 'margin-top: 10px;'>
+			<div id = "logo" class="grid_4" style = 'margin-top: 10px;'>
 
 			
 
-				<a style = 'margin-left: 20px;' href = '<?php echo base_url() ?>' title = 'Pinpoint Africa Media Logo' ><img src = 'images/logo-transparent.png' alt = 'Pinpoint Africa Media Logo' /></a>
+				<a style = 'margin-left: 20px;' href = '<?php echo base_url() ?>' title = 'Pinpoint Africa Media Logo' >
+					<img src = 'images/logo-transparent.png' alt = 'Pinpoint Africa Media Logo' /></a>
 			
 
 				

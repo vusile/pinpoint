@@ -2,7 +2,7 @@
 <div class='grid_12' style = 'margin-top:30px;'>
 <h1 style = 'font-size: 20px; text-align:center;font-weight:normal;margin-top: -26px;'>Over <span style="font-weight:bold">15 MILLION </span>digital banner ads delivered to nearly<span style="font-weight:bold"> 600,000 </span>unique/different people<br> on <span style="font-weight:bold">8 of Tanzania’s most popular websites </span>every month!
 </h1>
-<h1 style="font-size: 20px; text-align:center; font-weight:normal"><span >Is Digital Part of Your Marketing Plan?</span></h1>
+<h1 style="font-size: 20px; text-align:center; font-weight:normal; margin-bottom: 40px;"><span >Is Digital Part of Your Marketing Plan?</span></h1>
 <div class='grid_12'>
 <div class='grid_4'>
 	<a href="http://www.jamiiforums.com"><img src="pageimages/jamiiforums.png" style=""/>  </a>

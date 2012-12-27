@@ -1,3 +1,4 @@
+
 <style>
 #advertising ul { font-size: 14px; list-style: none; margin:0}
 #advertising ul li { padding: 10px; border-bottom: 2px solid #757779; border-left: 2px solid #757779;}
@@ -13,22 +14,39 @@
 	
 <h1 style="font-size:18px;text-align:center;margin-top:33px;">Delivered Numbers Are Guaranteed! Prices Are VAT Exclusive </h1> 
 
-<table class="stats" cellspacing="0">
+    
+<table class="stats" cellspacing="0"> 
 
+ <?php foreach($titles->result() as $title): ?>
+   
 <tr>
-<td class="hed" colspan="4"><h2><?php echo $title ?></h2></td>  <!--Target All 8 Sites (No Targeting)-->
+<td class="hed" colspan="4"><h2><?php echo $title->title; ?></h2></td>
+</tr>
 
+	<?php 
+	$i=0;
+	if($i==0)
+		echo '<tr>';
+
+	foreach($rates[$title->id] as $key=>$rate): 
+
+	?>
+		<td><span style="font-weight:bold;"> <?php echo $key ?></span><?php echo $rate ?></td>
+	<?php 
+	
+	$i++;
+	if($i==3)
+	{
+		echo '<tr>';
+		$i=0;
+	}
+	
+	endforeach; 
+
+	?>		
 </tr>
-<tr>
-<td><span style="font-weight:bold;">$250</span><br> 200,000 ad impressions to <br> 35,000 different people</td>
-<td><span style="font-weight:bold;">$500</span><br> 400,000 ad impressions to <br> 70,000 different people</td>
-<td><span style="font-weight:bold;">$750</span><br> 600,000 ad impressions to <br> 105,000 different people</td>
-</tr>
-<tr>
-<td><span style="font-weight:bold;">$1000</span><br> 800,000 ad impressions to <br> 140,000 different people</td>
-<td><span style="font-weight:bold;">$1500</span><br> 1,200,000 ad impressions to <br> 210,000 different people</td>
-<td><span style="font-weight:bold;">$2500</span><br> 2,000,000 ad impressions to <br> 350,000 different people</td>
-</tr>
+<?php endforeach; ?>
+
 <tr>
 <td class="hed" colspan="4"><img src="images/gender.png" class="imgleft" style="margin-left: -905px;"/><h2 style="margin-top: -60px;">Target = Gender(Men or Women)</h2><img src="images/gender.png" class="imgright" style="margin-right: -900px;"/> </td>
 </tr>

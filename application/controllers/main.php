@@ -28,19 +28,21 @@ class main extends CI_Controller {
 			$header['intro'] = '<span style = "color:#FFF"><strong>Real Time Perfomance Monitoring</strong></span>';
 			$header['intro_p'] = '<span style = "color:#FFF"><strong>( #impressions, people reached, clicks, etc.)</strong></span>';
 		
-			//$data['cpm_advertising'] = $this->db->get('cpm_advertising_bundles');
-			$this->db->select('*');
-			$this->db->from('advertising_desc');
-			$this->db->join('advertising', 'advertising_desc.id = advertising.category','left');
-			$data = $this->db->get();
-			
-			//$data['title'][] = $v->title;
-//			$data['icon'][] = $v->icon;
-//			$data['rate'][] = $v->rate;
-//			$data['icon'][] = $v->Details;
-//			
-		
-        	//$data['query'] = $this->db->get();
+        	$data['titles']=$this->db->get('desc_advertising');
+
+        	$advertising = $this->db->get('advertising');
+        	$rates_array = array();
+
+        	foreach($advertising->result() as $ad )
+        	{
+        		$rates_array[$ad->category_id][$ad->rate]=$ad->Details;
+        		//$rates_array[$ad->category_id]['details' . $ad->advertising_id]=
+        	}
+
+        	$data['rates']=$rates_array;
+        	
+        	//print_r($data['rates']);
+        	//die();
 
 			$this->load->view('Header',$header);
 			$this->load->view('navigation');
@@ -50,7 +52,7 @@ class main extends CI_Controller {
 		{
 			$this->db->where('url',$option);
 			$data = $this->db->get('content');
-			$contents = $data->row();
+			
 			
 			$header['title'] =  $contents->title;
 			$header['h1'] = $contents->title;
