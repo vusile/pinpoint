@@ -10,9 +10,17 @@
 
 <br><br>
 <div class=grid_12>
-	<div id="pdf"><img src="images/file_pdf.png" /> </div>
+	<div id="pdf"><a href="#"><img src="images/file_pdf.png"  style="margin-bottom: -22px;
+margin-top: 10px;
+margin-left:39px;"/> </a>
+       <p style="margin-bottom:0px;"><a href="#">Rate Card (pdf)</a></p>
+
+	</div>
 	
-<h1 style="font-size:18px;text-align:center;margin-top:33px;">Delivered Numbers Are Guaranteed! Prices Are VAT Exclusive </h1> 
+<h1 style="font-size: 18px;
+text-align: center;
+margin-top: 18px;
+margin-left: 157px;color:#EFEE0F;">Delivered Numbers Are Guaranteed! Prices Are VAT Exclusive </h1> 
 
     
 <table class="stats" cellspacing="0"> 
