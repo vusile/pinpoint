@@ -171,7 +171,9 @@ a img
 #navigation
 {
   width:100%;
+
   margin-top:30px;
+
 }
 
 #navigation ul
@@ -217,19 +219,23 @@ table.stats
 
 table.stats td
 {
+
   background-color:#d9d9d9;
   color:#000;
   text-align:center;
   border:1px #ffff00 solid;
+
   font-size:15px;
   width:34%;
 }
 
 table.stats td.hed
 {
+
   background-color:#000014;
   padding:4px;
   border-bottom:2px #ffff00 solid;
+
   font-weight:bold;
   text-align:center;
   height:80px;
@@ -263,7 +269,9 @@ td.hed .imgright
 {
   text-align:center;
   font-size:16px;
+
   color:#009BDF;
+
   font-weight:normal;
 }
 
@@ -2230,6 +2238,7 @@ form li.complex p.error
   color:#FFFFFF;
   font-size:11px;
   font-weight:bold;
+<<<<<<< HEAD
 }
 
 .sample-ads-container {
@@ -2253,3 +2262,6 @@ form li.complex p.error
 }
 
 .stats p { padding:0; display: inline }
+=======
+}
+>>>>>>> 414701e6ebbf73d4896da339fa2caeafa97f0736

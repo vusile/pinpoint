@@ -1,4 +1,5 @@
 
+
 <style>
 #advertising ul { font-size: 14px; list-style: none; margin:0}
 #advertising ul li { padding: 10px; border-bottom: 2px solid #757779; border-left: 2px solid #757779;}
@@ -73,5 +74,6 @@ margin-left:60px;"/> </a>
 <div class='grid_4' style = 'text-align:center;font-size:18px;border:solid 1px #fff;margin-right: 10px;'><span style="color:red;margin-bottom:30px;">$250 </span><br>200,000 ad impressions to <br> 35,000 different people</div>
 
 </div> !-->
+
 
 
