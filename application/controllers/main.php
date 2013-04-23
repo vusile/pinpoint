@@ -3,20 +3,17 @@ class main extends CI_Controller {
 
 	function index()
 	{
-		redirect('home');
-	}
-	function home(){
-		$header['title'] = 'Pinpoint Africa Media | Cost Effective Advertising';
+		$header['title'] = 'Pinpoint Africa Media | Cost Effective Advertising in Tanzania';
 		$header['intro'] = '';
 		
-		$header['h1'] ='The Single Most Cost-effective Way to Reach Proffesional & Middle Class Tanzanians!
-';
+		$header['h1'] ='The Most Cost-effective Way to Advertise to Middle Class Tanzania!  Reach Hundrends of Thousands of Unique / Different People for < $0.01 each.';
 		
 		$this->load->view('Header',$header);
 		$this->load->view('navigation');
 		$this->load->view('Home');
 		$this->load->view('Footer');
 	}
+
 	
 	function advertising($option='')
 	{
@@ -25,8 +22,8 @@ class main extends CI_Controller {
 		{
 			$header['title'] = 'Advertising Rates';
 			$header['h1'] ='Common Monthly Package Rates';
-			$header['intro'] = '<span style = "color:#FFF"><strong>Real Time Perfomance Monitoring</strong></span>';
-			$header['intro_p'] = '<span style = "color:#FFF"><strong>( #impressions, people reached, clicks, etc.)</strong></span>';
+			$header['intro'] = '<strong>Monitor Performance in Real Time<br>Receive Detailed Performance Report With Every Invoice.</strong>';
+
 		
         	$data['titles']=$this->db->get('desc_advertising');
 
@@ -108,6 +105,7 @@ class main extends CI_Controller {
 		$header['intro'] = '';
 		$datas['content'] = $contents->text;
 		$datas['peopleimg']=   '<img src="images/Home-Page-Image.png" style="margin: 84px 0px 0px 0px;" />';
+		$datas['width'] = 'width:700px';
 		
 		$this->load->view('Header',$header);
 		$this->load->view('navigation');
@@ -473,17 +471,60 @@ class main extends CI_Controller {
 	{
 		$this->db->where('url',$url);
 		$data = $this->db->get('content');
-		$contents = $data->row();
-		
-		$header['title'] =  $contents->title;
-		$header['h1'] = $contents->title;
-		$header['intro'] = $contents->intro;
-		$datas['content'] = $contents->text;
-		
+
+		if($data->num_rows() > 0)
+		{
+			$contents = $data->row();	
+			$header['title'] =  $contents->title;
+			$header['h1'] = $contents->title;
+			$header['intro'] = $contents->intro;
+			$datas['content'] = $contents->text;
+		}
+
+		else
+		{
+			$sizes_array=array();
+			$this->db->where('url', $url);
+			$data = $this->db->get('concept_pages');
+			$contents = $data->row();
+			$header['title'] =  $contents->name;
+			$header['h1'] = $contents->name;
+			$header['intro'] = $contents->intro;
+
+			$this->db->where('concept_id', $contents->id);
+			$datas['ads'] = $this->db->get('ads');
+
+			$sizes = $this->db->get('ad_sizes');
+
+			foreach($sizes->result() as $size)
+			{
+				$sizes_array[$size->id]['width'] = $size->width;
+				$sizes_array[$size->id]['height'] = $size->height;
+			}
+
+			$datas['sizes'] = $sizes_array;
+		}
+
 		$this->load->view('Header',$header);
 		$this->load->view('navigation');
 		$this->load->view('adpages',$datas);
 		$this->load->view('Footer');
+	}
+
+	function register_test()
+	{
+		$username = 'abba@pinpointafricamedia.com';
+		$email = 'abba@pinpointafricamedia.com';
+		$password = 'mlapakatz';
+		$additional_data = array(
+			'first_name' => 'Abba',
+		);								
+//		$group = array('1'); // Sets user to admin. No need for array('1', '2') as user is always set to member by default
+
+		$id = $this->ion_auth->register($username, $password, $email, $additional_data);
+		echo($id);		
+		
+		
 	}
 	
 	

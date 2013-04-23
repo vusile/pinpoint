@@ -9,7 +9,7 @@
 		});
 </script>
 
-<div style = 'clear: none; width: 550px; font-size:12px; margin-left:20px; margin-right:0px; margin-top:65px;'>
+<div style = 'clear: none; width: 550px; font-size:12px; margin-left:20px; margin-right:0px; margin-top:80px;'>
 <?php 
 
 $attributes = array ('id'=>'contact', 'name'=>'contact', 'class'=>"wufoo page", 'autocomplete'=>'off');
@@ -148,6 +148,18 @@ width:43%;"
 <!--<img src="images/mail.png";/><p style="margin: -28px 0px 10px 50px;font-size:15px;">sales@PinPointAfricaMedia.com
 	</p>-->
 </div>
+
+
+<div style = 'clear: none; width: 300px; height:30px;font-size:14px; margin-right: 145px;float: right;margin-top: -320px;'>
+	<a href="#"><img src="images/file_pdf.png" /></a><h1 style="font-size: 14px;
+color: #fff;
+margin-left: 44px;
+margin-top: -28px;"><a target = "_blank" href="uploads/files/PinPointRateCard2013.pdf">Download Rate Card (pdf)</a></h1>
+<!--<img src="images/mail.png";/><p style="margin: -28px 0px 10px 50px;font-size:15px;">sales@PinPointAfricaMedia.com
+	</p>-->
+</div>
+		
+
 		
 
                    

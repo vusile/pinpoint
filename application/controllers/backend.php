@@ -31,9 +31,13 @@ class backend extends CI_Controller {
 
 			$datas['datasent'] .= '<li   style = "background: #3366FF">' . anchor(site_url("backend/content"), "Content" , 'title="Content"') . "</li>"; 
 			$datas['datasent'] .= '<li   style = "background: #3366FF">' . anchor(site_url("backend/network_sites"), "Network Sites" , 'title="Network Sites"') . "</li>"; 
-			$datas['datasent'] .= '<li   style = "background: #3366FF">' . anchor(site_url("backend/targeting_options"), "Targeting Options" , 'title="Targeting Options"') . "</li>"; 
+			$datas['datasent'] .= '<li   style = "background: #3366FF">' . anchor(site_url("backend/targeting_options"), "Targeting Options" , 'title="Targeting Options"') . "</li>"; 			
+			$datas['datasent'] .= '<li   style = "background: #3366FF">' . anchor(site_url("backend/advertising"), "Advertising Rates" , 'title="Advertising Rates"') . "</li>"; 
+			$datas['datasent'] .= '<li   style = "background: #3366FF">' . anchor(site_url("backend/desc_advertising"), "Advertising Categories" , 'title="Advertising Categories"') . "</li>"; 
 			$datas['datasent'] .= '<li   style = "background: #3366FF">' . anchor(site_url("backend/creative_services"), "Creative Services" , 'title="Creative Services"') . "</li>"; 
-			$datas['datasent'] .= '<li   style = "background: #3366FF">' . anchor(site_url("backend/cpm_advertising_bundles"), "CPM Advertising Bundles" , 'title="CPM Advertising Bundles"') . "</li>"; 
+			$datas['datasent'] .= '<li   style = "background: #3366FF">' . anchor(site_url("backend/cpm_advertising_bundles"), "CPM Advertising Bundles" , 'title="CPM Advertising Bundles"') . "</li>"; 			
+			$datas['datasent'] .= '<li   style = "background: #3366FF">' . anchor(site_url("backend/ad_sizes"), "Ad Sizes" , 'title="Ad Sizes"') . "</li>"; 
+			$datas['datasent'] .= '<li   style = "background: #3366FF">' . anchor(site_url("backend/concept_pages"), "Concept Pages" , 'title="Concept Pages"') . "</li>"; 
 			
 			
 			$datas['datasent'] .= '</ul>';
@@ -44,13 +48,113 @@ class backend extends CI_Controller {
 		}
 	}
 	
+	function make_url_from_title($title,$table,$id)
+	{
+		$url = strtolower(url_title($title));
+		
+
+		$this->db->where('url',$url);
+		$obj=$this->db->get($table);
+		
+		if($obj->num_rows() > 0)
+		{
+			$this->db->where('id',$id);
+			$this->db->where('url',$url);
+			$obj=$this->db->get($table);
+			
+			if( $obj->num_rows() == 0 )
+				$url = $this->make_url_from_title($url . '-' . $url,$table,$id);
+		}
+		
+		return $url;
+		
+	}
+
 	function content()
 	{
 		$output = $this->grocery_crud->render();
 
 		$this->_example_output($output);
 	}
+	
+	function advertising()
+	{
+	
+		$this->grocery_crud->set_relation('category_id','desc_advertising','title');
+		$output = $this->grocery_crud->render();
 		
+
+		$this->_example_output($output);
+	}
+	
+	function desc_advertising()
+	{
+		$this->grocery_crud->set_field_upload('icon','images');
+		$output = $this->grocery_crud->render();
+
+		$this->_example_output($output);
+	}
+			
+	function ad_sizes()
+	{
+		
+		$output = $this->grocery_crud->render();
+
+		$this->_example_output($output);
+	}
+					
+	function concept_pages()
+	{
+		$this->grocery_crud->callback_after_insert(array($this, 'concept_pages_callback'));
+		$this->grocery_crud->unset_fields('url','page_url','ads');
+		$this->grocery_crud->unset_columns('url');
+		$output = $this->grocery_crud->render();
+
+
+		$this->_example_output($output);
+	}
+		
+
+	function concept_pages_callback($post_array, $primary_key)
+	{
+		$url = $this->make_url_from_title($post_array['name'],'concept_pages',$primary_key);
+		$data = array(
+			'url'=>$url,
+			'page_url' => base_url() . 'concepts/' . $url,
+			'ads' => "<a href = '" . base_url() . "backend/ads/" . $primary_key . "'>Ads</a>"
+
+			);
+
+		$this->db->where('id', $primary_key);
+		$this->db->update('concept_pages', $data);
+		//print_r($data);
+	}
+
+	function ads($concept_id)
+	{
+
+		$this->grocery_crud->where('concept_id',$concept_id);
+		$this->grocery_crud->set_relation('size','ad_sizes','size_name');
+		$this->grocery_crud->set_field_upload('ad','uploads');
+		$this->grocery_crud->display_as('width', 'Full Expansion Width');
+		$this->grocery_crud->display_as('height', 'Full Expansion Height');
+		$this->grocery_crud->unset_fields('concept_id');
+		$this->grocery_crud->unset_columns('concept_id');
+		$this->grocery_crud->callback_after_insert(array($this, 'ads_callback'));
+
+		$output = $this->grocery_crud->render();
+		$output->additional_text = "<a href = '" . base_url() . "backend/concept_pages/" . $this->uri->segment(4) . "'>Return to Concept Pages</a>";
+
+		$this->_example_output($output);
+	}
+
+	function ads_callback($post_array,$primary_key)
+	{
+		$data['concept_id'] = $this->uri->segment(3);
+
+		$this->db->where('id', $primary_key);
+		$this->db->update('ads', $data);
+	}
 		
 	function network_sites()
 	{
